@@ -5,7 +5,7 @@ from flask import Flask, request
 def main():
     app = Flask(__name__)
 
-    @app.route('/', methods=['GET'])
+    @app.route('/', methods=['PUT'])
     def get_name() -> str:
 
         json_file = request.get_json()
