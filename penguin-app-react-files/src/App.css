@@ -1,0 +1,28 @@
+.web-body {
+  background-color: #dcdcdc;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.penguin-title {
+  font-family: courier, monospace;
+  min-height: 100px;
+  font-style: bold;
+  font-size: 100px;
+  color: white;
+}
+
+.penguin-image {
+}
+
+.web-description {
+}
+
+.penguin-button {
+}
+
+.complimentary-text {
+}
