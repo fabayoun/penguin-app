@@ -1,8 +1,9 @@
 import json
 
 import attr
-from penguin_back_end.random_sentence_generator.sentence_generator import SentenceGenerator
+import requests
 
+from penguin_back_end.random_sentence_generator.sentence_generator import SentenceGenerator
 
 @attr.dataclass
 class Penguin:
@@ -11,12 +12,21 @@ class Penguin:
 
     def think_of_sentence(self):
         generator = SentenceGenerator(self.name_of_friend)
-        self.sentence = generator.choose_sentence()
+        sentence = generator.choose_sentence()
+        self.sentence = sentence + self.add_suggestion()
+
+    def add_suggestion(self):
+        response = requests.get("https://www.boredapi.com/api/activity")
+        response_dict = json.loads(response.text)
+        activity = response_dict['activity'].lower().replace(" you ", f" {self.name_of_friend} ").replace(" your ", f" {self.name_of_friend}'s ")
+        return f" Maybe {self.name_of_friend} should {activity}"
 
     def say_sentence(self) -> str:
         content = {"sentence": self.sentence}
         json_string = json.dumps(content)
         return json_string
+
+
 
 
 
