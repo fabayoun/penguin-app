@@ -18,7 +18,7 @@ class Penguin:
     def add_suggestion(self):
         response = requests.get("https://www.boredapi.com/api/activity")
         response_dict = json.loads(response.text)
-        activity = response_dict['activity'].lower().replace(" you ", f" {self.name_of_friend} ").replace(" your ", f" {self.name_of_friend}'s ")
+        activity = response_dict['activity'].lower().replace(" you ", f" {self.name_of_friend} ").replace(" your ", f" {self.name_of_friend}'s ").replace(" have ", " has ").replace(" haven't ", " hasn't ").replace(" don't ", " doesn't ")
         return f" Maybe {self.name_of_friend} should {activity}"
 
     def say_sentence(self) -> str:
