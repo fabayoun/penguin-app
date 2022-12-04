@@ -12,23 +12,16 @@
   min-height: 100px;
   font-size: 80px;
   color: white;
-}
-
-.penguin-image {
+  margin-top: 10px;
 }
 
 .web-description {
   font-family: courier, monospace;
-  font-size: 40px;
+  margin-top: 5px;
+  font-size: 30px;
   color: white;
 }
 
 .input-name {
   margin-bottom: 20px;
-}
-
-.penguin-button {
-}
-
-.complimentary-text {
 }

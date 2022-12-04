@@ -5,13 +5,17 @@ import axios from "axios";
 import { useState } from "react";
 
 function ButtonPenguin(props) {
-  const [name, setName] = useState("No name set yet.");
-  const [sentence, setSentence] = useState("No sentence set yet.");
+  const [name, setName] = useState("");
+  const [sentence, setSentence] = useState("");
+
+  const handleHover = () => {
+    setName(props.passedData);
+    console.log({ name });
+  };
 
   const sendRequest = () => {
-    setName(props.passedData);
-    axios.put("http://127.0.0.1:5000/", { name: { name } }).then((response) => {
-      console.log(response.data);
+    axios.put("http://127.0.0.1:8000/", { name }).then((response) => {
+      setSentence(response.data["sentence"]);
     });
 
     console.log("value is", { sentence });
@@ -22,11 +26,12 @@ function ButtonPenguin(props) {
       <Button
         className="buttonPenguin"
         onClick={sendRequest}
+        onMouseEnter={handleHover}
         variant="outline-success"
       >
         Penguin Me!
       </Button>{" "}
-      <AppearingText />
+      <AppearingText dataPassed={sentence} />
     </div>
   );
 }

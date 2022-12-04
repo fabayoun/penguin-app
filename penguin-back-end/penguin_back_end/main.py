@@ -1,9 +1,11 @@
 from penguin_back_end.domain.model import Penguin
 from flask import Flask, request
+from flask_cors import CORS
 
 
 def main():
     app = Flask(__name__)
+    CORS(app)
 
     @app.route('/', methods=['PUT'])
     def get_name() -> str:
