@@ -4,7 +4,7 @@ import attr
 from penguin_back_end.random_sentence_generator.sentence_generator import SentenceGenerator
 
 
-@attr.s
+@attr.dataclass
 class Penguin:
     name_of_friend: str
     sentence: str = None

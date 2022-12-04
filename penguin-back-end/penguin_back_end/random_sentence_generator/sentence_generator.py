@@ -10,5 +10,4 @@ class SentenceGenerator:
 
     def choose_sentence(self) -> str:
         sentence = random.choice(self.sentences)
-        sentence.replace("generic-name", self.input_name)
-        return sentence
+        return sentence.replace("generic-name", self.input_name)
