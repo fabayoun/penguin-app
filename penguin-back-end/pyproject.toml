@@ -9,6 +9,7 @@ python = "^3.8"
 attr = "^0.3.2"
 self = "^2020.12.3"
 Flask = "^2.2.2"
+requests = "^2.28.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
