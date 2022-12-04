@@ -11,6 +11,8 @@ class Penguin:
     sentence: str = None
 
     def think_of_sentence(self):
+        if len(self.name_of_friend):
+            self.name_of_friend = "Your Penguin Mum"
         generator = SentenceGenerator(self.name_of_friend)
         sentence = generator.choose_sentence()
         self.sentence = sentence + self.add_suggestion()
