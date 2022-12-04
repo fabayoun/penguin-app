@@ -1,13 +1,18 @@
 [tool.poetry]
-name = "penguin_back_end"
+name = "penguin-back-end"
 version = "0.1.0"
 description = ""
 authors = ["Fabian Schomerus <97347781+fabayoun@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+attr = "^0.3.2"
+self = "^2020.12.3"
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.10.0"
+flake8 = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
