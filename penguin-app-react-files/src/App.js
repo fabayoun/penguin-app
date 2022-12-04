@@ -1,5 +1,8 @@
 import "./App.css";
 import Penguin from "./Penguin";
+import ButtonPenguin from "./Button";
+import AppearingText from "./AppearingText";
+import InputName from "./InputName";
 
 function App() {
   return (
@@ -10,8 +13,7 @@ function App() {
         <p className="web-description">
           Type in your name here for a friendly penguin compliment:
         </p>
-        <p className="penguin-button">Button here</p>
-        <p className="complimentary-text">Text will appear here</p>
+        <InputName className="input-name" />
       </div>
     </body>
   );
