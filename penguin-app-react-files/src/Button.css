@@ -1,5 +1,19 @@
 .buttonPenguin {
-  width: 100px;
-  height: 30px;
+  width: 250px;
+  height: 60px;
   color: black;
+  font-family: courier, monospace;
+  font-size: 20px;
+}
+
+.buttonPenguin:hover {
+  background-color: green;
+  color: white;
+  font-style: bold;
+}
+
+.buttonPenguin:active {
+  background-color: blue;
+  color: white;
+  font-style: bold;
 }
