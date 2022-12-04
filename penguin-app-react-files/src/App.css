@@ -1,7 +1,7 @@
 .web-body {
   background-color: #808080;
-  height: 760px;
   display: flex;
+  min-height: 760px;
   align-content: center;
   justify-content: center;
   text-align: center;

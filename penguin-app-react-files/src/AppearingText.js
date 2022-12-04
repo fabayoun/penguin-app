@@ -5,7 +5,7 @@ import { useEffect } from "react";
 function AppearingText(props) {
   return (
     <div>
-      <p className="appearing-text">"{props.dataPassed}"</p>
+      <p className="appearing-text">{props.dataPassed}</p>
     </div>
   );
 }

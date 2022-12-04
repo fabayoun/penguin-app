@@ -15,7 +15,7 @@ function ButtonPenguin(props) {
 
   const sendRequest = () => {
     axios.put("http://127.0.0.1:8000/", { name }).then((response) => {
-      setSentence(response.data["sentence"]);
+      setSentence(`"${response.data["sentence"]}"`);
     });
 
     console.log("value is", { sentence });
