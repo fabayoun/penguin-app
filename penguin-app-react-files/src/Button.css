@@ -7,9 +7,10 @@
 }
 
 .buttonPenguin:hover {
-  background-color: green;
+  background-color: #008000;
   color: white;
-  font-style: bold;
+  font-weight: bold;
+  border: 2px black solid;
 }
 
 .buttonPenguin:active {
